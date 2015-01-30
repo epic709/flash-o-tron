@@ -1,0 +1,46 @@
+<head>
+  <link rel="stylesheet" href="/css/normalize.css">
+  <link rel="stylesheet" href="/css/main.css">
+  <title></title>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>My Kurang Manis Blog</h1>
+    </header>
+
+    <div class="content">
+      <h2>Posts tagged with "<%=params[:tag]%>"</h2>
+      <% @all_posts.each do |post| %>
+      <section>
+        <h3><%= post.title %></h3>
+        <%= post.body %>
+      </section>
+      <ol>
+        <p>Tags:
+          <% post.tag_list.each do |tag| %>
+          <li><a href="/tags/<%=tag%>"><%= tag %></a></li>
+          <% end %>
+        </p>
+      </ol>
+      <% end %>
+    </div>
+    <hr>
+
+    <div class="pagination">
+      <a href="page1.html" class="disabled">&lt;&lt; Previous</a>
+      <ol>
+        <li><a href="page1.html" class="active">1</a></li>
+        <li><a href="page2.html">2</a></li>
+        <li><a href="page3.html">3</a></li>
+        <li><a href="page4.html">4</a></li>
+        <li><a href="page5.html">5</a></li>
+      </ol>
+      <a href="page2.html">Next &gt;&gt;</a>
+    </div>
+
+    <div class="footer">
+      Copyright &copy; 2015 Ad(ri)a(r)n Inc.
+    </div>
+  </div>
+</body>

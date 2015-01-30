@@ -1,0 +1,23 @@
+<head>
+  <link rel="stylesheet" href="/css/normalize.css">
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <h1>Deck Selected: <%= session[:cur_deck] %></h1>
+    </header>
+    <form action="/new_post" method="post">
+      <p>Make your best guess!</p>
+      Question: <%= @round_of_guesses %>
+      <br></br>
+      Answer: <input type="text" name="g_answer">
+      <br></br>
+
+      <input type="submit" value="Next card">
+    </form>
+
+    Copyright &copy; 2015 Ad(ri)a(r)n Inc.
+  </div>
+</body>

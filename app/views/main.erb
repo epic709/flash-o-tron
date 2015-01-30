@@ -1,0 +1,22 @@
+<head>
+  <link rel="stylesheet" href="/css/normalize.css">
+  <link rel="stylesheet" href="/css/main.css">
+  <title></title>
+</head>
+
+<body>
+  <div class="main_container">
+    <header>
+      <h1>Welcome to Flashcard-o-Tron, <%= session[:user_id] %>!</h1>
+    </header>
+    <form action="/game" method="post">
+      <p>Select a deck to play!</p>
+      <ol>
+          <% @decks.each do |d| %>
+            <li><%= d.name %><input type="submit" value=<%= d.id %> name="d_id" %></li>
+            <p></p>
+          <% end %>
+      </ol>
+    </form>
+  </div>
+</body>

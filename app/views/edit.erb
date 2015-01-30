@@ -1,0 +1,23 @@
+<body>
+  <div class="container">
+    <header>
+      <h1>My Kurang Manis Blog</h1>
+    </header>
+    <form action="/edit/<%= @post.id %>" method="post">
+      <input type="hidden" name="_method" value="update">
+      <p>Edit your post for My Kurang Manis Blog</p>
+          <br></br>
+      Title: <input type="text" name="p_title" value="<%=@post.title%>">
+      <br></br>
+      Description:
+      <textarea cols="65" rows="10" name="p_body">
+        <%=@post.body%>
+      </textarea>
+      <br></br>
+      Tags: <input type="text" value="<%=@tags%>" name="p_tags"> (please separate multiple tags with commas)
+      <br></br>
+      <input type="submit" value="Submit!">
+    </form>
+    </div>
+  </div>
+</body>
