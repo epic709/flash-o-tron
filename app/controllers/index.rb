@@ -3,6 +3,7 @@
 # - use the URL to pass persistent data for the round e.g. deck_id. For example: /game/:deck_id/cards/card_id
 # - don't rely too much on sessions[]
 # - the logic could be changed so that for every card displayed, create a guess, save the results, display another card
+# http://guides.rubyonrails.org/routing.html
 
 enable :sessions
 require 'byebug'
